@@ -11,7 +11,11 @@ function handelsubmit(event) {
     };
     if (!info.email || !info.password) {
         alert("All form fields must be filled in");
-    } console.log(info);
-    form.reset();
+    }
+    else {
+        console.log(info);
+        form.reset()
+    } ;
+    
 }
 

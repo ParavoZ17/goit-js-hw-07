@@ -26,17 +26,17 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-const addImg = images.map((imgItem) => {
+const galletyItems = images.map((imgItem) => {
  const item = document.createElement("li");
   const img = document.createElement("img");
   img.src = imgItem.url;
   img.alt = imgItem.alt;
-  gallery.prepend(item);
-  item.prepend(img);
+    item.appendChild(img);
+    
+    return item;
 });
 
-
-
+gallery.append(...galletyItems);
 
 
 
